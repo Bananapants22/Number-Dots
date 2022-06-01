@@ -1,8 +1,8 @@
 from tkinter.tix import Tree
 from PIL import Image
 
-width = 400
-height = 200
+width = 1920
+height = 1080
 
 def gen_primes(p):
     for i in range(2, width*height):
