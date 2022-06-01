@@ -11,8 +11,10 @@ print("Prime List Generated")
 
 img = Image.new('1', (width, height))
 for prime in primes:
-    y = (prime-1) // height
-    x = prime - (height*y) - 1
+    y = prime // width
+    x = prime - (width*y) - 1
+    if x > 1919 or y > 1079:
+        print(x,y)
     img.putpixel((x,y),1)
 filename = 'primes_' + str(width) + 'x' + str(height) + '.png'
 img.save(filename)
