@@ -16,3 +16,13 @@ def gen_primes(n: int) -> list:
             primes.append(k)
 
     return primes
+
+def gen_fibonacci(n: int) -> list:
+    """Generate all the fibonacci numbers less than or equal to n."""
+    fibs = [1,1]
+
+    i = 2
+    while fibs[i-1] + fibs[i-2] <= n:
+        fibs.append(fibs[i-1]+fibs[i-2])
+        i += 1
+    return fibs
